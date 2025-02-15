@@ -1,7 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
-const db = new sqlite3.Database('mydatabase.db');
+const db = new sqlite3.Database('game_data.db');
 
 // Middleware a JSON adatok kezeléséhez
 app.use(express.json());
