@@ -1,7 +1,9 @@
 const express = require('express');
 const Database = require('better-sqlite3');
 const app = express();
-const db = new sqlite3.Database('game_data.db');
+const db = new Database('./game_data.db');
+const row = db.prepare("SELECT * FROM potions").get(1);
+console.log(row);
 
 // Middleware a JSON adatok kezeléséhez
 app.use(express.json());
